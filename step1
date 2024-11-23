@@ -1,0 +1,21 @@
+shop_list={'Bubblegum: $': 2,
+'Toffee: $': 0.2,
+'Ice cream: $': 5,
+'Milk chocolate: $': 4,
+'Doughnut: $': 2.5,
+'Pancake: $': 3.2}
+earned_amount = (202,118,2250,1680,1075,80)
+month_sum = float(sum(earned_amount))
+
+Keys = shop_list.keys()
+new_shop_list = dict(zip(Keys, earned_amount))
+
+
+print("Earned amount:")
+for k ,v in new_shop_list.items():
+    print(k,v ,sep="",end="\n")
+print()
+print("Income: $",month_sum, sep="")
+staff = int(input("Staff expenses:\n"))
+other = int(input("Other expenses:\n"))
+print("Net income: $", month_sum - (staff + other), sep="")
